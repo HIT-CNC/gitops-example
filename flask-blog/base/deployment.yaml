@@ -4,6 +4,7 @@ metadata:
   labels:
     app: flask-blog
   name: flask-blog
+  namespace: default
 spec:
   replicas: 1
   selector:
