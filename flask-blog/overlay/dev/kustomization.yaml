@@ -8,7 +8,7 @@ resources:
 
 #
 # # namespace to deploy all Resources to
-namespace: flask
+#namespace: flask
 #
 # # labels added to all Resources
 commonLabels:
