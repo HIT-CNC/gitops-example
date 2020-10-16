@@ -5,8 +5,8 @@ kind: Kustomization
 # # list of Resource Config to be Applied
 resources:
 - namespace.yaml
-- flask-blog.yaml
-- flask-service.yaml
+- deployment.yaml
+- service.yaml
 
 #
 # # namespace to deploy all Resources to
