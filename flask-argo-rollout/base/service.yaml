@@ -4,8 +4,8 @@ metadata:
   name: rollouts-blog
 spec:
   ports:
-  - port: 80
-    targetPort: http
+  - port: 8000
+    targetPort: 8000
     protocol: TCP
     name: http
   selector:

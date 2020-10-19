@@ -14,4 +14,4 @@ resources:
 commonLabels:
   app: flask
   env: development
-namePrefix: nashad-abdul-rahiman-
+namePrefix: dev-
