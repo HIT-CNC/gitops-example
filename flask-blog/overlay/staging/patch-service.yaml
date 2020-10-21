@@ -4,6 +4,10 @@ metadata:
   name: flask-blog
 spec:
   ports:
+  - port: 8000
+    name: http
+    targetPort: 8000
+    $patch: delete
   - port: 443
     protocol: TCP
     targetPort: 8000
