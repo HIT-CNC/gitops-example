@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-blog
+spec:
+  #replicas: 1
+  template:
+    spec:
+      containers:
+      - image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog_staging
+        name: flask
+

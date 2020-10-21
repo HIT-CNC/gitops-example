@@ -21,21 +21,16 @@ spec:
         app: flask-blog
     spec:
       containers:
-      - image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog
+      - name: flask
+        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog
         imagePullPolicy: Always
-        name: flask-blog-7d7s2
         ports:
         - containerPort: 8000
           protocol: TCP
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
         volumeMounts:
         - mountPath: /app/data
           name: mypd
-      dnsPolicy: ClusterFirst
       restartPolicy: Always
-      schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
       volumes:

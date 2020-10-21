@@ -7,6 +7,7 @@ bases:
 - ../../base
 patches:
 - path: ./patch-service.yaml
+- path: ./patch-deployment.yaml
 # # namespace to deploy all Resources to
 namespace: staging
 #
@@ -15,7 +16,3 @@ commonLabels:
   app: flask
   env: staging
 namePrefix: stage-
-images:
-   - name: the-my-app
-     newName: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog_staging
-     newTag: latest
