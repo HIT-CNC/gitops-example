@@ -7,6 +7,7 @@ spec:
   - port: 443
     protocol: TCP
     targetPort: 8000
+    name: http
   selector:
     app: flask-blog
   type: NodePort
