@@ -4,9 +4,9 @@ metadata:
   name: flask-blog
 spec:
   ports:
-  - port: 8000
+  - port: 443
     protocol: TCP
-    targetPort: 443
+    targetPort: 8000
   selector:
     app: flask-blog
   type: NodePort
