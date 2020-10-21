@@ -5,13 +5,13 @@ kind: Kustomization
 # # list of Resource Config to be Applied
 bases:
 - ../../base
-
-#
+patches:
+- path: ./patch-service.yaml
 # # namespace to deploy all Resources to
-namespace: dev
+namespace: staging
 #
 # # labels added to all Resources
 commonLabels:
   app: flask
-  env: development
-namePrefix: dev-
+  env: staging
+namePrefix: stage-
