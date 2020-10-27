@@ -4,7 +4,6 @@ metadata:
   labels:
     app: flask
     env: staging
-    monitor: prometheus
     release: monitoring
   name: monitoring-staging
   namespace: monitoring
