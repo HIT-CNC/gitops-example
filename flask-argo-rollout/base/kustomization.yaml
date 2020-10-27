@@ -9,10 +9,9 @@ resources:
 
 #
 # # namespace to deploy all Resources to
-namespace: production
+
 #
 # # labels added to all Resources
 commonLabels:
    app: rollouts-blog
-   env: production
 #     
