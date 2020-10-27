@@ -4,8 +4,9 @@ metadata:
   labels:
     app: flask
     env: staging
+    monitor: prometheus
   name: monitoring-staging
-  namespace: staging
+  namespace: monitoring
 spec:
   endpoints:
     - path: /metrics
