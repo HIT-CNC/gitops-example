@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rollouts-blog
-  namespace: production
+  namespace: default
   labels:
     app: rollouts-blog
 spec:

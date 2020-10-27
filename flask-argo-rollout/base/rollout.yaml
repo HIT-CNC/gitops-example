@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollouts-blog
-  namespace: production
+  namespace: default
 spec:
   replicas: 5
   strategy:
