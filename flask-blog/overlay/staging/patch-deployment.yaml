@@ -8,5 +8,5 @@ spec:
     spec:
       containers:
         - image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog_staging:v10.0.4-staging
-        name: flask
+          name: flask
 
