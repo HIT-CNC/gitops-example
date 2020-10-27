@@ -3,14 +3,13 @@ kind: ServiceMonitor
 metadata:
   labels:
     app: flask
-    app.kubernetes.io/instance: staging-flask
     env: staging
   name: monitoring-staging
-  namespace: monitoring
+  namespace: staging
 spec:
   endpoints:
     - path: /metrics
-      port: service
+      port: metrics
   namespaceSelector:
     matchNames:
       - staging
