@@ -5,6 +5,8 @@ kind: Kustomization
 # # list of Resource Config to be Applied
 bases:
 - ../../base
+resources:
+- ./servicemonitor.yaml
 patches:
 - path: ./patch-service.yaml
 - path: ./patch-deployment.yaml
