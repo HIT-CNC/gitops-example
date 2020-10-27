@@ -13,6 +13,6 @@ namespace: production
 #
 # # labels added to all Resources
 commonLabels:
-   app: flask
+   app: rollouts-blog
    env: production
 #     
