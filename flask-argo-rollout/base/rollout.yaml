@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: rollouts-blog
-        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog:v10.0.4
+        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog:v10.0.4-dark
         ports:
         - name: http
           containerPort: 8000
