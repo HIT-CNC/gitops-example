@@ -3,18 +3,18 @@ kind: Rollout
 metadata:
   name: rollouts-blog
 spec:
-  replicas: 5
+  replicas: 3
   strategy:
     canary:
       steps:
-      - setWeight: 20
-      - pause: {}
       - setWeight: 40
-      - pause: {duration: 10}
-      - setWeight: 60
-      - pause: {duration: 10}
+      - pause: {}
       - setWeight: 80
       - pause: {duration: 10}
+#      - setWeight: 60
+#      - pause: {duration: 10}
+#      - setWeight: 80
+#      - pause: {duration: 10}
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: rollouts-blog
-        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog
+        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog:v10.0.4
         ports:
         - name: http
           containerPort: 8000

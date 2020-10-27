@@ -1,0 +1,27 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"annotations":{},"labels":{"app":"kube-prometheus-stack-node-exporter","app.kubernetes.io/instance":"monitoring","chart":"kube-prometheus-stack-10.1.2","heritage":"Tiller","release":"monitoring"},"name":"monitoring-kube-prometheus-node-exporter","namespace":"monitoring"},"spec":{"endpoints":[{"port":"metrics"}],"jobLabel":"jobLabel","selector":{"matchLabels":{"app":"prometheus-node-exporter","release":"monitoring"}}}}
+  creationTimestamp: "2020-10-26T10:19:09Z"
+  generation: 1
+  labels:
+    app: kube-prometheus-stack-node-exporter
+    app.kubernetes.io/instance: monitoring
+    chart: kube-prometheus-stack-10.1.2
+    heritage: Tiller
+    release: monitoring
+  name: monitoring-kube-prometheus-node-exporter
+  namespace: monitoring
+  resourceVersion: "3624616"
+  selfLink: /apis/monitoring.coreos.com/v1/namespaces/monitoring/servicemonitors/monitoring-kube-prometheus-node-exporter
+  uid: 4dd71035-0140-49d2-b14d-dbb4dce3e67f
+spec:
+  endpoints:
+  - port: metrics
+  jobLabel: jobLabel
+  selector:
+    matchLabels:
+      app: prometheus-node-exporter
+      release: monitoring
