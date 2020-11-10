@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flask-blog
+  name: flask-blog
+  namespace: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-blog
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: flask-blog
+    spec:
+      containers:
+      - name: flask
+        image: 207080326074.dkr.ecr.ap-southeast-1.amazonaws.com/flask_blog:v10.0.4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /app/data
+          name: mypd
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: mypd
+        persistentVolumeClaim:
+          claimName: flask-data-claim
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+   name: flask-data-claim
+   namespace: flask
+spec:
+   accessModes:
+    - ReadWriteOnce
+   resources:
+     requests:
+       storage: 2Gi
+   storageClassName: gp2
+
