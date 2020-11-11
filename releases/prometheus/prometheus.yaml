@@ -1,0 +1,14 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: monitoring
+  namespace: monitoring
+spec:
+  releaseName: monitoring
+  chart:
+    git: https://github.com/HIT-CNC/gitops-example.git
+    path: charts/kube-prometheus-stack
+    ref: main
+  values:
+    grafana:
+      enabled: false
