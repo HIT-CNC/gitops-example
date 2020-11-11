@@ -12,3 +12,5 @@ spec:
   values:
     grafana:
       enabled: false
+    alertmanager:
+      enabled: false
