@@ -10,6 +10,7 @@ spec:
   - port: 8000
     protocol: TCP
     targetPort: 8000
+    nodePort: 30004
     name: http
   - port: 9200
     protocol: TCP
@@ -18,4 +19,5 @@ spec:
   selector:
     app: flask-blog
   sessionAffinity: None
-  type: ClusterIP
+  type: NodePort
+  
