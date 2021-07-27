@@ -19,5 +19,5 @@ spec:
   selector:
     app: flask-blog
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
   
