@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: nashadabdulrahiman/spring-app:latest
+        image: nashadabdulrahiman/flask_blog:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
