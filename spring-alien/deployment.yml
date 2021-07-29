@@ -16,6 +16,6 @@ spec:
         app: demospringalien
     spec:
       containers:
-        - image: nashadabdulrahiman/spring-pet:latest
+        - image: nashadabdulrahiman/spring-pet:29
           name: demospringalien
         
