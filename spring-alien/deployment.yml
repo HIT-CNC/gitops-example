@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: demospringalien
+    env: dev
+    team: coe
   name: demospringalien
   namespace: app-ns
 spec:
