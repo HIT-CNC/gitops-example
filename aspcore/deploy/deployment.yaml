@@ -22,14 +22,11 @@ spec:
     spec:
       containers:
       - name: dotnet
-        image:  hpranchernode1.uemedgenta.com:30008/uem/netcoreapp:latest        
+        image:  hpranchernode1.uemedgenta.com:30008/uem/netcoreapp:28
         imagePullPolicy: Always
         ports:
         - containerPort: 80
           protocol: TCP
-        volumeMounts:
-        - mountPath: /app/data
-          name: mypd
         env:
         - name: ConnectionStrings__DefaultConnection
           value: 'server=dotnet-mysql;userid=root;password=password;database=testdb;'
@@ -37,23 +34,6 @@ spec:
       - name: regcred
       securityContext: {}
       terminationGracePeriodSeconds: 30
-      volumes:
-      - name: mypd
-        persistentVolumeClaim:
-          claimName: dotnet-data-claim
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-   name: dotnet-data-claim
-   namespace: default
-spec:
-   accessModes:
-    - ReadWriteOnce
-   resources:
-     requests:
-       storage: 2Gi
-   storageClassName: local-path
 ---
 apiVersion: v1
 kind: Service
